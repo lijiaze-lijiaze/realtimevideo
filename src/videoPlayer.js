@@ -1,5 +1,6 @@
 import React from 'react';
-import videojs from 'video.js'
+import videojs from 'video.js';
+import videozhCN from 'video.js/dist/lang/zh-CN.json'
 import './App.css';
 
 export default class VideoPlayer extends React.Component {
@@ -8,6 +9,7 @@ export default class VideoPlayer extends React.Component {
     this.player = videojs(this.videoNode, this.props, function onPlayerReady() {
       console.log('onPlayerReady', this)
     });
+    videojs.addLanguage('zh-CN',videozhCN)
   }
 
   // destroy player on unmount

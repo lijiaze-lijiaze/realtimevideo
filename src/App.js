@@ -6,7 +6,10 @@ import './App.css';
 
 const videoJsOptions = {
   autoplay: true,
+  language:'zh-CN',
   controls: true,
+  width:500,
+  height:300,
   sources: [{
     src: '/path/to/video.mp4',
     type: 'video/mp4'
@@ -16,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <img style={{opacity:'0.1'}} src={logo} className="App-logo" alt="logo" />
       <VideoPlayer { ...videoJsOptions } />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -34,3 +38,5 @@ function App() {
 }
 
 export default App;
+
+
